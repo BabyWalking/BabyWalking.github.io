@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Franklin Xia | Personal Portfolio</title>
+    <title data-translate-key="pageTitle">Franklin Xia | Personal Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+    strong {
+        font-weight: bold !important;
+        color: inherit !important;
+    }
         /* Custom styles */
         @keyframes float {
             0%, 100% { transform: translateY(0); }
@@ -75,16 +79,20 @@
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans">
     <!-- Navigation -->
-    <nav class="glass-card fixed w-full z-50">
+<nav class="bg-gray-900/80 backdrop-blur-md fixed w-full z-20 top-0 left-0 border-b border-gray-700/50">
+                <div class="language-switcher px-4 py-2">
+                    <button onclick="changeLanguage('en')" class="text-white hover:text-blue-400 px-2">English</button>
+                    <button onclick="changeLanguage('zh')" class="text-white hover:text-blue-400 px-2">中文</button>
+                </div>
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <a href="#" class="text-2xl font-bold gradient-text">Franklin Xia</a>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover:text-blue-400 transition">Home</a>
-                    <a href="#about" class="hover:text-blue-400 transition">About</a>
-                    <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
-                    <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-                    <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+                    <a href="#home" class="hover:text-blue-400 transition" data-translate-key="navHome">Home</a>
+                    <a href="#about" class="hover:text-blue-400 transition" data-translate-key="navAbout">About</a>
+                    <a href="#skills" class="hover:text-blue-400 transition" data-translate-key="navSkills">Skills</a>
+                    <a href="#projects" class="hover:text-blue-400 transition" data-translate-key="navProjects">Projects</a>
+                    <a href="#contact" class="hover:text-blue-400 transition" data-translate-key="navContact">Contact</a>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-xl">
                     <i class="fas fa-bars"></i>
@@ -94,11 +102,11 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden glass-card px-6 py-4">
             <div class="flex flex-col space-y-4">
-                <a href="#home" class="hover:text-blue-400 transition">Home</a>
-                <a href="#about" class="hover:text-blue-400 transition">About</a>
-                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
-                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+                <a href="#home" class="hover:text-blue-400 transition" data-translate-key="navHome">Home</a>
+                <a href="#about" class="hover:text-blue-400 transition" data-translate-key="navAbout">About</a>
+                <a href="#skills" class="hover:text-blue-400 transition" data-translate-key="navSkills">Skills</a>
+                <a href="#projects" class="hover:text-blue-400 transition" data-translate-key="navProjects">Projects</a>
+                <a href="#contact" class="hover:text-blue-400 transition" data-translate-key="navContact">Contact</a>
             </div>
         </div>
     </nav>
@@ -108,15 +116,15 @@
         <div class="container mx-auto px-6 py-12 md:py-24">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-12 md:mb-0">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="gradient-text">Franklin Xia</span></h1>
-                    <h2 class="text-2xl md:text-3xl mb-6">Full Stack Developer</h2>
-                    <p class="text-gray-400 mb-8 max-w-lg">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4" data-translate-key="heroTitle">Hi, I'm <span class="gradient-text">Franklin Xia</span></h1>
+                    <h2 class="text-2xl md:text-3xl mb-6" data-translate-key="heroSubtitle">Full Stack Developer</h2>
+                    <p class="text-gray-400 mb-8 max-w-lg" data-translate-key="heroDescription">
                         I build exceptional digital experiences with modern technologies. 
                         Passionate about creating solutions that make an impact.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-medium hover:opacity-90 transition">Get In Touch</a>
-                        <a href="#projects" class="px-6 py-3 border border-gray-700 rounded-lg font-medium hover:bg-gray-800 transition">View Work</a>
+                        <a href="#contact" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-medium hover:opacity-90 transition" data-translate-key="heroButton1">Get In Touch</a>
+                        <a href="#projects" class="px-6 py-3 border border-gray-700 rounded-lg font-medium hover:bg-gray-800 transition" data-translate-key="heroButton2">View Work</a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
@@ -140,33 +148,33 @@
     <!-- About Section -->
     <section id="about" class="py-20 bg-gray-800/50">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 section-title">About Me</h2>
+            <h2 class="text-3xl font-bold mb-12 section-title" data-translate-key="aboutTitle">About Me</h2>
             
             <div class="flex flex-col lg:flex-row gap-12">
                 <div class="lg:w-1/2">
-                    <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
-                    <p class="text-gray-400 mb-6">
+                    <h3 class="text-2xl font-semibold mb-4" data-translate-key="aboutSubtitle">Who I Am</h3>
+                    <p class="text-gray-400 mb-6" data-translate-key="aboutDesc1">
                         Over 14 years of experience in full-stack technology management, a senior software architect who has led teams of 40+ people and delivered multiple large-scale projects, deeply integrating technical strategy with business goals.
                     </p>
-                    <p class="text-gray-400 mb-6">
+                    <p class="text-gray-400 mb-6" data-translate-key="aboutDesc2">
                         Proficient in software architecture, including client-side (Windows, MacOS, Linux, browser), mobile development (iOS, React Native, Flutter), and AI application architecture (AIGC, RAG, Agent). Familiar with server-side architecture, including distributed microservices and AWS cloud computing. Led multiple enterprise-level technology architecture transformations, capable of building robust and efficient system architectures for businesses.
                     </p>
-                    <p class="text-gray-400 mb-6">
+                    <p class="text-gray-400 mb-6" data-translate-key="aboutDesc3">
                         Familiar with streaming media protocols, including WebRTC, RTMP, and HLS, capable of supporting high-performance, low-latency multimedia transmission and real-time interactive application development.
                     </p>
-                    <p class="text-gray-400 mb-6">
+                    <p class="text-gray-400 mb-6" data-translate-key="aboutDesc4">
                         Mastery of deep learning algorithms such as Transformer, RNN, and CNN, and proficient in using AI tools like PyTorch and Langchain, with the ability to quickly build and deploy intelligent solutions.
                     </p>
-                    <p class="text-gray-400 mb-6">
+                    <p class="text-gray-400 mb-6" data-translate-key="aboutDesc5">
                         Skilled in building technology systems from scratch (0 to 1), successfully reduced the average monthly bug count from 100+ to under 10, and improved R&D efficiency by over 40%, providing strong support for product quality and stability.
                     </p>
-                    <p class="text-gray-400 mb-6">
+                    <p class="text-gray-400 mb-6" data-translate-key="aboutDesc6">
                         As a serial entrepreneur, I have technology management experience from leading companies like Zoom and various startups. I have received multiple industry honors, including the Excellent Application Software Award at the Suzhou Mobile Internet Innovation Competition (for the Suzhoudào app), demonstrating excellent market insight and innovation capabilities.
                     </p>
                     <div class="flex flex-wrap gap-4 mb-8">
                         <div class="flex items-center">
                             <i class="fas fa-map-marker-alt text-blue-400 mr-2"></i>
-                            <span>Suzhou, China</span>
+                            <span data-translate-key="aboutLocation">Suzhou, China</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-envelope text-blue-400 mr-2"></i>
@@ -177,24 +185,20 @@
                             <span>wx: 454177995</span>
                         </div>
                     </div>
-                    <a href="#" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition">
-                        Download Resume
-                        <i class="fas fa-download ml-2"></i>
-                    </a>
                 </div>
                 
                 <div class="lg:w-1/2">
-                    <h3 class="text-2xl font-semibold mb-6">Experience</h3>
+                    <h3 class="text-2xl font-semibold mb-6" data-translate-key="experienceTitle">Experience</h3>
                     <div class="space-y-8 relative pl-8 border-l border-gray-700">
                         <!-- Timeline item 1 -->
                         <div class="timeline-item relative">
                             <div class="glass-card p-6 rounded-lg">
                                 <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold text-lg">Technical Vice President (Acting Director)</h4>
+                                    <h4 class="font-bold text-lg" data-translate-key="exp1Title">Technical Vice President (Acting Director)</h4>
                                     <span class="bg-blue-900/50 text-blue-400 px-3 py-1 rounded-full text-sm">2024.03 - 2025.02</span>
                                 </div>
-                                <h5 class="text-blue-400 mb-2">Suzhou Landhigh Cloud Network Technology Co., Ltd.</h5>
-                                <p class="text-gray-400">
+                                <h5 class="text-blue-400 mb-2" data-translate-key="exp1Company">Suzhou Landhigh Cloud Network Technology Co., Ltd.</h5>
+                                <p class="text-gray-400" data-translate-key="exp1Desc">
                                     <strong>AI Digital Content Generation Platform:</strong> Overall planning of AI computing power platform and multi-modal engine R&D, building a digital content matrix covering live streaming, film and television, VR, etc., supporting the intelligent transformation of 20+ industry clients; used cluster distributed rendering technology to generate special effects rendering for "Ne Zha Reborn".<br><br>
                                     <strong>Technology Management:</strong> Reported directly to the CTO, led requirements analysis, technical problem-solving, team recruitment, and process optimization, driving a 90% reduction in the monthly average bug count.<br><br>
                                     <strong>Key Achievements:</strong> Completed the NDI to WebRTC reconstruction for the streaming media protocol, maintaining the same latency while improving stability by 50%; led the team to optimize the performance of the UE real-time rendering system, reducing GPU resource consumption by 30%; reconstructed the distributed cloud rendering platform, reducing the bug rate by 90% and improving performance by 20%; led the AI team to complete the training and fine-tuning of large models such as AI digital humans, TTS, and ASR, as well as the engineering of AI products; promoted DevOps, standardized the CI/CD process, completed the deployment and launch of Jenkins pipeline, achieving automated code compilation, automatic generation of version numbers, packaging, and signing, reducing the version release time by 70%.
@@ -206,11 +210,11 @@
                         <div class="timeline-item relative">
                             <div class="glass-card p-6 rounded-lg">
                                 <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold text-lg">Founding Partner / Technical Director</h4>
+                                    <h4 class="font-bold text-lg" data-translate-key="exp2Title">Founding Partner / Technical Director</h4>
                                     <span class="bg-blue-900/50 text-blue-400 px-3 py-1 rounded-full text-sm">2023.09 - 2024.02</span>
                                 </div>
-                                <h5 class="text-blue-400 mb-2">Suzhou Morefuse Technology Co., Ltd.</h5>
-                                <p class="text-gray-400">
+                                <h5 class="text-blue-400 mb-2" data-translate-key="exp2Company">Suzhou Morefuse Technology Co., Ltd.</h5>
+                                <p class="text-gray-400" data-translate-key="exp2Desc">
                                     <strong>AI Enterprise Service Product Line:</strong> Built an LLM knowledge base question and answer system (LLM + Langchain + Django + Vue + Redis + Celery + Milvus + Myqsl + Docker) and launched the POC within 30 days; developed AI marketing/training robots (AI agents), increasing customer signing rate by 35%.<br><br>
                                     <strong>Technical Architecture:</strong> Adopted Docker Compose containerized deployment, achieving a system stability of 99.9%.
                                 </p>
@@ -221,11 +225,11 @@
                         <div class="timeline-item relative">
                             <div class="glass-card p-6 rounded-lg">
                                 <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold text-lg">Senior Software Engineer</h4>
+                                    <h4 class="font-bold text-lg" data-translate-key="exp3Title">Senior Software Engineer</h4>
                                     <span class="bg-blue-900/50 text-blue-400 px-3 py-1 rounded-full text-sm">2019.01 - 2023.02</span>
                                 </div>
-                                <h5 class="text-blue-400 mb-2">ZOOM Video Communications (US-funded)</h5>
-                                <p class="text-gray-400">
+                                <h5 class="text-blue-400 mb-2" data-translate-key="exp3Company">ZOOM Video Communications (US-funded)</h5>
+                                <p class="text-gray-400" data-translate-key="exp3Desc">
                                     <strong>Core Feature Development:</strong> Led the development of the Mac platform ZR Meeting IM system and ZR Meeting Polling system, completed patented features such as sensitive word filtering and dynamic emoticon feedback.<br><br>
                                     <strong>Technical Influence:</strong> Promoted the architectural design of the digital signage system, helping to increase the enterprise customer coverage rate by 20%.
                                 </p>
@@ -236,11 +240,11 @@
                         <div class="timeline-item relative">
                             <div class="glass-card p-6 rounded-lg">
                                 <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold text-lg">Mobile Platform Technical Manager</h4>
+                                    <h4 class="font-bold text-lg" data-translate-key="exp4Title">Mobile Platform Technical Manager</h4>
                                     <span class="bg-blue-900/50 text-blue-400 px-3 py-1 rounded-full text-sm">2014.03 - 2019.01</span>
                                 </div>
-                                <h5 class="text-blue-400 mb-2">Codyy Education Technology</h5>
-                                <p class="text-gray-400">
+                                <h5 class="text-blue-400 mb-2" data-translate-key="exp4Company">Codyy Education Technology</h5>
+                                <p class="text-gray-400" data-translate-key="exp4Desc">
                                     <strong>0 to 1 Technology Breakthrough:</strong> Independently developed the Gstreamer streaming media player, supporting online teaching for 26,000 schools nationwide, achieving a playback success rate of 99.5%, and obtained the Suzhou City Shortage Talent Certification in 2017.<br><br>
                                     <strong>Team Building:</strong> Established iOS/Android dual-platform teams, led the R&D and iteration of the education cloud APP for 10+ versions, increasing user retention rate by 45%.
                                 </p>
@@ -255,7 +259,7 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 section-title">My Skills</h2>
+            <h2 class="text-3xl font-bold mb-12 section-title" data-translate-key="skillsTitle">My Skills</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Skill Card 1 -->
@@ -263,8 +267,8 @@
                     <div class="w-14 h-14 rounded-full bg-blue-500/10 flex items-center justify-center mb-4">
                         <i class="fas fa-laptop-code text-2xl text-blue-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Frontend Development</h3>
-                    <p class="text-gray-400 mb-4">
+                    <h3 class="text-xl font-bold mb-3" data-translate-key="skill1Title">Frontend Development</h3>
+                    <p class="text-gray-400 mb-4" data-translate-key="skill1Desc">
                         Crafting beautiful, responsive interfaces with modern frameworks and libraries.
                     </p>
                     <div class="flex flex-wrap gap-2">
@@ -281,8 +285,8 @@
                     <div class="w-14 h-14 rounded-full bg-purple-500/10 flex items-center justify-center mb-4">
                         <i class="fas fa-server text-2xl text-purple-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Backend Development</h3>
-                    <p class="text-gray-400 mb-4">
+                    <h3 class="text-xl font-bold mb-3" data-translate-key="skill2Title">Backend Development</h3>
+                    <p class="text-gray-400 mb-4" data-translate-key="skill2Desc">
                         Building robust APIs and server-side applications with scalable architectures.
                     </p>
                     <div class="flex flex-wrap gap-2">
@@ -304,8 +308,8 @@
                     <div class="w-14 h-14 rounded-full bg-green-500/10 flex items-center justify-center mb-4">
                         <i class="fas fa-cloud text-2xl text-green-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">DevOps & Cloud</h3>
-                    <p class="text-gray-400 mb-4">
+                    <h3 class="text-xl font-bold mb-3" data-translate-key="skill3Title">DevOps & Cloud</h3>
+                    <p class="text-gray-400 mb-4" data-translate-key="skill3Desc">
                         Deploying and managing applications in cloud environments with CI/CD pipelines.
                     </p>
                     <div class="flex flex-wrap gap-2">
@@ -319,7 +323,7 @@
             
             <!-- Skill Bars -->
             <div class="mt-16 glass-card p-6 rounded-lg">
-                <h3 class="text-xl font-bold mb-6">Technical Proficiency</h3>
+                <h3 class="text-xl font-bold mb-6" data-translate-key="skillBarsTitle">Technical Proficiency</h3>
                 <div class="space-y-6">
                     <div>
                         <div class="flex justify-between mb-2">
@@ -365,7 +369,7 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-gray-800/50">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 section-title">Featured Projects</h2>
+            <h2 class="text-3xl font-bold mb-12 section-title" data-translate-key="featuredProjectsTitle">Featured Projects</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
@@ -375,7 +379,7 @@
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-bold text-xl">AI Text-to-Image Project</h3>
+                            <h3 class="font-bold text-xl" data-translate-key="project1Title">AI Text-to-Image Project</h3>
                             <div class="flex space-x-2">
                                 <a href="#" class="text-gray-400 hover:text-blue-400 transition">
                                     <i class="fab fa-github"></i>
@@ -385,7 +389,7 @@
                                 </a>
                             </div>
                         </div>
-                        <p class="text-gray-400 mb-4">
+                        <p class="text-gray-400 mb-4" data-translate-key="project1Desc">
                             A cutting-edge AI project that generates images from textual descriptions, leveraging advanced deep learning models.
                         </p>
                         <div class="flex flex-wrap gap-2">
@@ -408,7 +412,7 @@
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-bold text-xl">RAG Project</h3>
+                            <h3 class="font-bold text-xl" data-translate-key="project2Title">RAG Project</h3>
                             <div class="flex space-x-2">
                                 <a href="#" class="text-gray-400 hover:text-blue-400 transition">
                                     <i class="fab fa-github"></i>
@@ -418,7 +422,7 @@
                                 </a>
                             </div>
                         </div>
-                        <p class="text-gray-400 mb-4">
+                        <p class="text-gray-400 mb-4" data-translate-key="project2Desc">
                             An advanced RAG system that enhances large language models with external knowledge retrieval for more accurate and informative responses.
                         </p>
                         <div class="flex flex-wrap gap-2">
@@ -453,7 +457,7 @@
                                 </a>
                             </div>
                         </div>
-                        <p class="text-gray-400 mb-4">
+                        <p class="text-gray-400 mb-4" data-translate-key="project3Desc">
                             An intelligent agent system capable of autonomous task execution, learning, and decision-making in complex environments.
                         </p>
                         <div class="flex flex-wrap gap-2">
@@ -470,25 +474,18 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="mt-12 text-center">
-                <a href="#" class="inline-flex items-center px-6 py-3 border border-gray-700 rounded-lg font-medium hover:bg-gray-800 transition">
-                    View All Projects
-                    <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 section-title">Get In Touch</h2>
+            <h2 class="text-3xl font-bold mb-12 section-title" data-translate-key="contactTitle">Get In Touch</h2>
             
             <div class="flex flex-col lg:flex-row gap-12">
                 <div class="lg:w-1/2">
-                    <h3 class="text-2xl font-semibold mb-6">Let's Talk</h3>
-                    <p class="text-gray-400 mb-8 max-w-lg">
+                    <h3 class="text-2xl font-semibold mb-6" data-translate-key="contactSubTitle">Let's Talk</h3>
+                    <p class="text-gray-400 mb-8 max-w-lg" data-translate-key="contactDesc">
                         Have a project in mind or want to discuss potential opportunities? 
                         Feel free to reach out and I'll get back to you as soon as possible.
                     </p>
@@ -511,4 +508,6 @@
                             <div>
                                 <h4 class="font-bold">WeChat</h4>
                                 <span class="text-gray-400">wx: 454177995</span>
+    <script src="assets/js/translation.js"></script>
+</body>
 </html>
